@@ -1,7 +1,2 @@
 console.log( "This is my extension");
-
-let paragraphs = document.getElementsByTagName('p')
-for (elt of paragraphs)
-{
-    elt.style['background-color'] = '#FF10FF';
-}
+let brand = document.querySelector('table tbody .po-brand td:nth-child(2) span');
