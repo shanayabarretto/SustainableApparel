@@ -3,6 +3,10 @@
     "name": "SustainableApparel",
     "description": "Be more mindful of the shops you patronize",
     "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
     "content_scripts": [
         {
             "matches": [
