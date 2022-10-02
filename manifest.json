@@ -1,5 +1,5 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "SustainableApparel",
     "description": "Be more mindful of the shops you patronize",
     "version": "1.0",
@@ -11,5 +11,10 @@
             ],
             "js": ["content.js"]
         }
-    ]
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "This is a pop up."
+
+    }
 }
