@@ -13,6 +13,9 @@ def get_environment_information_for_company(company_name):
     environment_score = data[0]['environment_score']
     environment_grade = data[0]['environment_grade']
     environment_level = data[0]['environment_level']
+    # Output as a json file
+    with open('environment.json', 'w') as f:
+        json.dump([environment_grade, environment_level, environment_score], f)
     return (environment_score, environment_grade, environment_level)
 
 print(get_environment_information_for_company("Microsoft"))

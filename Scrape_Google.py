@@ -1,5 +1,6 @@
 # This file contains all methods relevant to getting the link results from a Google search.
 
+import json
 from bs4 import BeautifulSoup
 import requests
 import lxml
@@ -32,6 +33,9 @@ def get_links(search_term, num_results=10, user_agent="Mozilla/5.0 (Windows NT 1
         if soup.select_one('.d6cvqb a[id=pnnext]'): params["start"] += 10
         else: break
     
+    # Output as a json file
+    with open('links.json', 'w') as f:
+        json.dump(items, f)
     return items
 
 print(get_links("Sustainability / eco-friendliness of Nike"))
